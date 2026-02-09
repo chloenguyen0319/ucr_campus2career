@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus to Career Session Series - UCR</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Fira+Sans:wght@300;400;500&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="canvas">
+    <header class="header-area">
+        <div class="title-group">
+            <h1>
+                <span class="title-main">Campus to Career</span>
+                <span class="title-sub">Session Series</span>
+            </h1>
+            <p class="tagline">Prepare you for success in your career</p>
+        </div>
+        <div class="logo-container">
+            <img src="assets/university_logo.png" alt="University Logo" class="main-logo">
+        </div>
+    </header>
+
+    <div class="info-strip">
+        <div class="event-details">
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div class="info-content">
+                    <span class="info-label">Date</span>
+                    <span class="info-value">Thursday, February 26, 2026</span>
+                </div>
+            </div>
+            <div class="info-divider"></div>
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div class="info-content">
+                    <span class="info-label">Time</span>
+                    <span class="info-value">3:00 PM PST</span>
+                </div>
+            </div>
+            <div class="info-divider"></div>
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div class="info-content">
+                    <span class="info-label">Location</span>
+                    <span class="info-value">SBB Finance Lab</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="description-section">
+        <div class="description-content">
+            <div class="description-accent"></div>
+            <blockquote class="description-text">
+                Join us for an engaging conversation with industry leaders who have successfully navigated the journey from campus to career. This interactive session will provide valuable insights into breaking into your desired field, building meaningful professional networks, and developing the skills that employers seek.
+            </blockquote>
+            <div class="description-highlights">
+                <div class="highlight-item">
+                    <span class="highlight-number">01</span>
+                    <span class="highlight-label">Career Insights from Industry Leaders</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">02</span>
+                    <span class="highlight-label">Networking & Professional Growth</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">03</span>
+                    <span class="highlight-label">Interactive Q&A Session</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="speakers-section">
+        <div class="section-title-container">
+            <h2 class="section-title">Meet Our Brilliant Speakers</h2>
+        </div>
+        
+        <div class="speaker-grid">
+            <div class="speaker-card" onclick="openBio('colin')">
+                <div class="frame"><img src="assets/colin_kessinger.jpg" class="speaker-img" alt="Colin Kessinger"></div>
+                <h3 class="name">Colin Kessinger</h3>
+                <span class="role">Supply Chain Advisor</span>
+                <span class="company">Xtillion</span>
+                <button class="bio-btn">View Bio</button>
+            </div>
+            <div class="speaker-card" onclick="openBio('bonnie')">
+                <div class="frame"><img src="assets/bonnie_li.jpeg" class="speaker-img" alt="Bonnie Li"></div>
+                <h3 class="name">Bonnie Li</h3>
+                <span class="role">Staff Behavioral Scientist</span>
+                <span class="company">Toyota Research Institute</span>
+                <button class="bio-btn">View Bio</button>
+            </div>
+            <div class="speaker-card" onclick="openBio('randolph')">
+                <div class="frame"><img src="assets/randolph_kim.jpeg" class="speaker-img" alt="Randolph Kim"></div>
+                <h3 class="name">Randolph Kim</h3>
+                <span class="role">Office Services Director</span>
+                <span class="company">Wedbush AlphaOne</span>
+                <button class="bio-btn">View Bio</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="moderator-section">
+        <div class="section-title-container">
+            <h2 class="section-title">Session Moderator</h2>
+        </div>
+        
+        <div class="moderator-grid">
+        <div class="moderator-card" onclick="openBio('moderator')">
+            <div class="moderator-frame">
+                <img src="assets/moderator.jpeg" class="moderator-img" alt="Event Moderator">
+            </div>
+            <h3 class="name">Dr. Sarah Martinez</h3>
+            <span class="role">Associate Dean</span>
+            <span class="company">A. Gary Anderson Graduate School of Management</span>
+            <button class="bio-btn">View Bio</button>
+        </div>
+        </div>
+    </section>
+
+    <div class="footer-reg">
+        <div class="qr-side">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://university.edu/register&color=003DA5" alt="QR Code">
+        </div>
+        <div class="cta-side">
+            <h2>Join the Conversation</h2>
+            <p class="footer-p">Gain insights, build connections, and accelerate your career journey.</p>
+            <a href="#" class="btn">Register Now</a>
+        </div>
+    </div>
+
+    <footer class="copyright">
+        © 2025 A. Gary Anderson Graduate School of Management
+    </footer>
+</div>
+
+<!-- Bio Modal -->
+<div id="bioModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBio()">&times;</span>
+        <div class="modal-header">
+            <img id="modalImg" src="" alt="Speaker Photo" class="modal-photo">
+            <div class="modal-title-section">
+                <h2 id="modalName" class="modal-name"></h2>
+                <p id="modalRole" class="modal-role"></p>
+                <p id="modalCompany" class="modal-company"></p>
+            </div>
+        </div>
+        <div id="modalBio" class="modal-bio"></div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
