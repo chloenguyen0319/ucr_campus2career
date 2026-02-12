@@ -408,7 +408,7 @@ body {
     gap: 12px;
 }
 
-.qr-side { background: var(--white); padding: 20px; border-radius: 2px; }
+.qr-side { background: var(--white); padding: 5px; border-radius: 2px; }
 .qr-side img { width: 130px; }
 
 .qr-label {
