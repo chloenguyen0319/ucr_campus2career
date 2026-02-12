@@ -15,11 +15,11 @@ const speakerBios = {
         bio: `<p>Dr. Colin Kessinger is a leader in data, analytics, and supply chain strategy, serving as a partner at Ethos Capital and Rebar Advisors and as an advisor at Kiso Technology, Xtillion, Lumi AI, and Rebar Advisors. With experience teaching at Michigan Ross, Stanford, and Berkeley Haas, Colin offers students a clear view of how analytical and strategic skills can open doors across industry, academia, and high-impact leadership roles.</p>`
     },
     bonnie: {
-        name: "Mrs. Bonnie Li",
+        name: "Dr. Bonnie Li",
         role: "Staff Behavioral Scientist",
         company: "Toyota Research Institute",
         image: "assets/bonnie_li.jpeg",
-        bio: `<p>Mrs. Bonnie Li is a Staff Behavioral Scientist at the Toyota Research Institute (TRI), where she works on human-centered AI research that connects behavioral science with intelligent systems and next-generation mobility technologies. A UC Riverside alumna, Bonnie shows how academic research, interdisciplinary thinking, and curiosity can translate into meaningful careers at the forefront of AI and technology innovation.</p>`
+        bio: `<p>Dr. Bonnie Li is a Staff Behavioral Scientist at the Toyota Research Institute (TRI), where she works on human-centered AI research that connects behavioral science with intelligent systems and next-generation mobility technologies. A UC Riverside alumna, Bonnie shows how academic research, interdisciplinary thinking, and curiosity can translate into meaningful careers at the forefront of AI and technology innovation.</p>`
     },
     randolph: {
         name: "Mr. Randolph Kim",
