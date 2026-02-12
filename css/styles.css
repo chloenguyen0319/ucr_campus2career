@@ -425,6 +425,7 @@ body {
     padding: 12px 30px;
     font-size: 0.85rem;
     margin-top: 5px;
+    white-space: nowrap;
 }
 
 .cta-side { flex: 1; padding-left: 60px; }
