@@ -12,7 +12,7 @@ const speakerBios = {
         role: "Partner & Advisor",
         company: "Ethos Capital | Kiso Technology | Xtillion | Lumi AI",
         image: "assets/colin_kessinger.jpg",
-        bio: `<p>Dr. Colin Kessinger is a leader in data, analytics, and supply chain strategy, serving as a partner at Ethos Capital and Rebar Advisors and as an advisor at Kiso Technology, Xtillion, Lumi AI, and Rebar Advisors. With experience teaching at Michigan Ross, Stanford, and Berkeley Haas, Colin offers students a clear view of how analytical and strategic skills can open doors across industry, academia, and high-impact leadership roles.</p>`
+        bio: `<p>Dr. Colin Kessinger is a two-time founder and analytics leader specializing in end-to-end data and supply chain strategy. He built and led a boutique analytics consulting firm with over 100 consultants, serving leading global brands across technology, retail, semiconductor, and automotive industries. The firm was later acquired by Accenture, where he served as a Managing Director. He previously founded Vivecon Inc., a supply chain risk-management software company. Colin has also taught at Michigan Ross (tenure-track faculty), Berkeley Haas, Stanford GSB, and Stanford Engineering, and holds a Ph.D. in Industrial Engineering and Operations Research. Today, he serves on advisory boards of multiple AI-focused startups, including Lumi.AI, and advises Accenture on strategic accounts—demonstrating how deep analytical expertise can evolve into entrepreneurship, leadership, and industry impact.</p>`
     },
     bonnie: {
         name: "Dr. Bonnie Li",
