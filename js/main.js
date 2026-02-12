@@ -5,42 +5,28 @@ const speakerBios = {
         role: "Professor and the Albert O. Steffey Chair in Marketing",
         company: "A. Gary Anderson Graduate School of Management",
         image: "assets/moderator.jpeg",
-        bio: `<p>Subramanian “Bala” Balachander is Professor and the Albert O. Steffey Chair in Marketing at
-the UCR School of Business. He also serves as the Academic Director of the Master of Science
-in Business Analytics (MSBA) program offered by the School of Business in conjunction with
-the Department of Statistics, and is the Area Coordinator for the Marketing area. His research
-studies competitive marketing strategy, pricing, bundling, sales promotions and market signaling
-employing methods of game theory and structural econometric models, and he has chaired the
-dissertations of close to a dozen doctoral students. His teaching interests are in marketing
-strategy, pricing, digital marketing and marketing models. Professor Balachander is a Senior
-Editor of Production and Operations Management and served previously on the Editorial Board
-of Marketing Science. He was recently recognized as a Global Retail Brand Management
-Research Fellow and was named a Purdue University Faculty Scholar in 2009. Prior to joining
-UCR, he was a Professor of Management at Purdue University’s Krannert School of
-Management. Professor Balachander has a Ph. D. in Industrial Administration from Carnegie
-Mellon University, an MBA from IIM, Calcutta and a B. Tech in Chemical Engineering from
-IIT, Madras.</p>`
+        bio: `<p>Subramanian “Bala” Balachander is Professor and the Albert O. Steffey Chair in Marketing at the UCR School of Business. He also serves as the Academic Director of the Master of Science in Business Analytics (MSBA) program offered by the School of Business in conjunction with the Department of Statistics, and is the Area Coordinator for the Marketing area. His research studies competitive marketing strategy, pricing, bundling, sales promotions and market signaling employing methods of game theory and structural econometric models, and he has chaired the dissertations of close to a dozen doctoral students. His teaching interests are in marketing strategy, pricing, digital marketing and marketing models. Professor Balachander is a Senior Editor of Production and Operations Management and served previously on the Editorial Board of Marketing Science. He was recently recognized as a Global Retail Brand Management Research Fellow and was named a Purdue University Faculty Scholar in 2009. Prior to joining UCR, he was a Professor of Management at Purdue University’s Krannert School of Management. Professor Balachander has a Ph. D. in Industrial Administration from Carnegie Mellon University, an MBA from IIM, Calcutta and a B. Tech in Chemical Engineering from IIT, Madras.</p>`
     },
     colin: {
-        name: "Colin Kessinger",
-        role: "Supply Chain Advisor",
-        company: "Xtillion",
+        name: "Dr. Colin Kessinger",
+        role: "Partner & Advisor",
+        company: "Ethos Capital | Kiso Technology | Xtillion | Lumi AI",
         image: "assets/colin_kessinger.jpg",
-        bio: `<p>TBU.</p>`
+        bio: `<p>Dr. Colin Kessinger is a leader in data, analytics, and supply chain strategy, serving as a partner at Ethos Capital and Rebar Advisors and as an advisor at Kiso Technology, Xtillion, Lumi AI, and Rebar Advisors. With experience teaching at Michigan Ross, Stanford, and Berkeley Haas, Colin offers students a clear view of how analytical and strategic skills can open doors across industry, academia, and high-impact leadership roles.</p>`
     },
     bonnie: {
-        name: "Bonnie Li",
+        name: "Mrs. Bonnie Li",
         role: "Staff Behavioral Scientist",
         company: "Toyota Research Institute",
         image: "assets/bonnie_li.jpeg",
-        bio: `<p>TBU.</p>`
+        bio: `<p>Mrs. Bonnie Li is a Staff Behavioral Scientist at the Toyota Research Institute (TRI), where she works on human-centered AI research that connects behavioral science with intelligent systems and next-generation mobility technologies. A UC Riverside alumna, Bonnie shows how academic research, interdisciplinary thinking, and curiosity can translate into meaningful careers at the forefront of AI and technology innovation.</p>`
     },
     randolph: {
-        name: "Randolph Kim",
-        role: "Office Services Director",
+        name: "Mr. Randolph Kim",
+        role: "Global Family Office Services Director",
         company: "Wedbush AlphaOne",
         image: "assets/randolph_kim.jpeg",
-        bio: `<p>TBU.</p>`
+        bio: `<p>Mr. Randolph Kim joined Wedbush in March 2025 as Director of Alpha One, Global Family Office Services, bringing over 13 years of experience spanning public equities, private equity, venture capital, and real estate. In this role, he is responsible for the growth and expansion of Wedbush Alpha One, fostering strategic family office relationships, and identifying unique investment opportunities.   Before joining Wedbush, Randolph spent a decade on the investment teams of two prominent single-family offices, where he developed a trusted network of family offices, next-generation leaders, and multi-family offices worldwide. He holds a Master of Finance and a B.A. in Economics, and is recognized for combining institutional discipline with entrepreneurial agility and a nuanced understanding of the family office landscape.</p>`
     }
 };
 
