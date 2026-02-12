@@ -1,582 +1,137 @@
-:root {
-    --brand-blue: #003DA5;
-    --brand-gold: #FFB81C;
-    --white: #ffffff;
-    --overlay: rgba(0, 0, 0, 0.2);
-}
+/* ============================================
+   DUAL QR CODE LAYOUT ADDITIONS
+   Add this CSS to your existing styles.css file
+   ============================================ */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Fira Sans', sans-serif;
-    background-color: #d1d5d8;
-    color: var(--white);
-    -webkit-font-smoothing: antialiased;
-}
-
-.canvas {
-    max-width: 1100px;
-    margin: 40px auto;
-    background: var(--brand-blue);
-    box-shadow: 0 50px 100px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.1);
-    overflow: hidden;
-    border-radius: 4px;
-}
-
-/* --- HEADER (Tight Layout) --- */
-.header-area {
-    display: flex;
-    align-items: center;
-    padding: 50px 80px; 
-    background: linear-gradient(rgba(0, 61, 165, 0.85), rgba(0, 61, 165, 0.85)), 
-                url('../assets/business_building_1.avif') center/cover no-repeat;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    position: relative;
-}
-
-.title-group { flex: 2; }
-
-.title-group h1 {
-    margin: 0;
-    line-height: 1.1;
-}
-
-.title-main {
-    font-family: 'EB Garamond', serif;
-    font-weight: 400;
-    font-size: 3.2rem;
-    display: block; 
-    letter-spacing: 1px;
-    color: var(--white);
-}
-
-.title-sub {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    color: var(--brand-gold);
-    display: block; 
-    margin-top: 5px;
-    letter-spacing: -1px;
-}
-
-.tagline {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 20px 0 0 0;
-    letter-spacing: 0.5px;
-}
-
-.logo-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main-logo { height: 220px; width: auto; object-fit: contain; }
-
-/* --- INFO STRIP --- */
-.info-strip {
-    background-color: var(--brand-gold);
-    padding: 40px 80px;
-}
-
-.event-details {
+/* Updated footer-reg to support two QR codes */
+.footer-reg {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #003DA5 0%, #002366 100%);
+    border-radius: 12px;
+    margin: 2rem;
 }
 
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: var(--brand-blue);
-}
-
-.info-icon {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    stroke: var(--brand-blue);
-    opacity: 0.9;
-}
-
-.info-content {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.info-label {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    opacity: 0.8;
-    margin-bottom: 5px;
-}
-
-.info-value {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-.info-divider {
-    width: 1px;
-    height: 50px;
-    background: rgba(0, 61, 165, 0.2);
-}
-
-/* --- DESCRIPTION SECTION --- */
-.description-section {
-    padding: 70px 80px;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.description-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.description-accent {
-    width: 60px;
-    height: 3px;
-    background: var(--brand-gold);
-    margin: 0 auto 35px;
-}
-
-.description-text {
-    font-family: 'Fira Sans', serif;
-    font-style: italic;
-    font-size: 1.55rem;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0 0 50px 0;
-    padding: 0;
-    border: none;
-    position: relative;
-}
-
-.description-highlights {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-}
-
-.highlight-item {
+.qr-side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
-.highlight-number {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--brand-gold);
-    opacity: 0.4;
-    letter-spacing: 2px;
+.qr-side img {
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-.highlight-label {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400;
-    max-width: 200px;
+.qr-side img:hover {
+    transform: scale(1.05);
 }
 
-/* --- SPEAKERS SECTION --- */
-.speakers-section {
-    padding: 60px 80px;
-}
-
-.section-title-container {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 2.8rem;
-    color: var(--white);
-    margin: 0;
-    display: inline-block;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    right: 20%;
-    height: 2px;
-    background: var(--brand-gold);
-    opacity: 0.6;
-}
-
-/* SPEAKER EFFECTS */
-.speaker-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-}
-
-.speaker-card { 
-    text-align: center; 
-    cursor: pointer;
-    position: relative;
-}
-
-.bio-btn {
-    margin-top: 15px;
-    padding: 10px 25px;
-    background: transparent;
-    color: var(--brand-gold);
-    border: 1px solid var(--brand-gold);
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-.speaker-card:hover .bio-btn {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.bio-btn:hover {
-    background: var(--brand-gold);
-    color: var(--brand-blue);
-}
-
-.frame {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border: 1px solid rgba(255,255,255,0.15);
-    margin-bottom: 25px;
-    padding: 8px;
-    background: rgba(255,255,255,0.02);
-    overflow: hidden; 
-    border-radius: 50%;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.speaker-img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    display: block;
-    border-radius: 50%;
-    transition: transform 0.4s ease;
-}
-
-.speaker-card:hover .frame {
-    border-color: var(--brand-gold);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.speaker-card:hover .speaker-img {
-    transform: scale(1.08);
-}
-
-.name {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.9rem;
-    margin: 0 0 8px 0;
-}
-
-.role {
-    font-family: 'Fira Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    color: var(--brand-gold);
-    letter-spacing: 2px;
-    display: block;
-}
-
-.company {
+.qr-label {
+    color: #FFB81C;
     font-family: 'Fira Sans', sans-serif;
     font-size: 0.9rem;
-    opacity: 0.7;
-    margin-top: 4px;
-    display: block;
-    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* --- MODERATOR SECTION --- */
-.moderator-section {
-    padding: 60px 80px;
-    background: rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.moderator-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-}
-
-.moderator-card {
+.cta-side {
     text-align: center;
-    grid-column: 2;
-    cursor: pointer;
-    position: relative;
+    flex: 1;
+    max-width: 400px;
+    padding: 0 2rem;
 }
-
-.moderator-frame {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border: 1px solid rgba(255,255,255,0.15);
-    margin-bottom: 25px;
-    padding: 8px;
-    background: rgba(255,255,255,0.02);
-    overflow: hidden;
-    border-radius: 50%;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.moderator-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 50%;
-}
-
-.moderator-card:hover .moderator-frame {
-    border-color: var(--brand-gold);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.moderator-card:hover .bio-btn {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.moderator-img {
-    transition: transform 0.4s ease;
-}
-
-.moderator-card:hover .moderator-img {
-    transform: scale(1.08);
-}
-
-/* --- FOOTER (QR Left, CTA Right) --- */
-.footer-reg {
-    background: var(--overlay); 
-    padding: 60px 80px;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.qr-side { background: var(--white); padding: 20px; border-radius: 2px; }
-.qr-side img { width: 130px; }
-
-.cta-side { flex: 1; padding-left: 60px; }
 
 .cta-side h2 {
+    color: white;
     font-family: 'Oswald', sans-serif;
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    margin: 0;
-    color: var(--brand-gold);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-p {
-    font-family: 'EB Garamond';
-    font-size: 1.5rem;
-    opacity: 0.85;
-    line-height: 1.4;
-    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 
-/* BUTTON EFFECTS RESTORED */
 .btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 20px 50px;
-    background: var(--brand-gold);
-    color: var(--brand-blue);
+    background: #FFB81C;
+    color: #003DA5;
+    padding: 12px 28px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
     text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease; /* Smooth transition for effects */
-    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: var(--white); /* Color change */
-    transform: translateY(-3px) scale(1.03); /* Subtle zoom/lift */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Depth */
-    color: var(--brand-blue);
+    background: #ffc94d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 184, 28, 0.4);
 }
 
-.btn:active {
-    transform: translateY(-1px);
-}
-
-.copyright {
-    padding: 30px;
-    text-align: center;
-    background: rgba(0,0,0,0.2);
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    opacity: 0.5;
-    text-transform: uppercase;
-}
-
-/* --- BIO MODAL --- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.modal-content {
-    background: linear-gradient(135deg, var(--brand-blue) 0%, #002580 100%);
-    margin: 5% auto;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 90%;
-    max-width: 700px;
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    position: relative;
-    animation: slideIn 0.3s ease;
-}
-
-@keyframes slideIn {
-    from { 
-        transform: translateY(-50px);
-        opacity: 0;
+/* Responsive adjustments for dual QR codes */
+@media (max-width: 768px) {
+    .footer-reg {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
     }
-    to { 
-        transform: translateY(0);
-        opacity: 1;
+    
+    .qr-side {
+        order: 2;
+    }
+    
+    .qr-side:first-child {
+        order: 2;
+    }
+    
+    .cta-side {
+        order: 1;
+        padding: 0 1rem;
+    }
+    
+    .qr-side:last-child {
+        order: 3;
+    }
+    
+    .qr-side img {
+        width: 120px;
+        height: 120px;
     }
 }
 
-.close {
-    color: var(--brand-gold);
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
+@media (max-width: 480px) {
+    .footer-reg {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .qr-side img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .cta-side h2 {
+        font-size: 1.4rem;
+    }
+    
+    .footer-p {
+        font-size: 0.9rem;
+    }
 }
-
-.close:hover,
-.close:focus {
-    color: var(--white);
-}
-
-.modal-header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.modal-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--brand-gold);
-}
-
-.modal-title-section {
-    flex: 1;
-}
-
-.modal-name {
-    font-family: 'EB Garamond', serif;
-    font-size: 2.2rem;
-    color: var(--white);
-    margin: 0 0 8px 0;
-}
-
-.modal-role {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    color: var(--brand-gold);
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.modal-company {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 1rem;
-    opacity: 0.8;
-    margin: 5px 0 0 0;
-    font-style: italic;
-}
-
-.modal-bio {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.modal-bio p {
-    margin: 0 0 15px 0;
-}
-
-@media (max-width: 950px) {
-    .header-area, .speaker-grid, .footer-reg { flex-direction: column; text-align: center; }
-    .logo-container { justify-content: center; margin-top: 30px; }
-    .cta-side { padding-left: 0; margin-top: 30px; }
-    .modal-header { flex-direction: column; text-align: center; }
-    .modal-content { padding: 30px 20px; }
-    .event-details { flex-direction: column; gap: 30px; }
-    .info-divider { display: none; }
-    .info-item { justify-content: center; }
-}
-
