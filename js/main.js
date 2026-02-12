@@ -1,11 +1,25 @@
 // Speaker Bio Data
 const speakerBios = {
     moderator: {
-        name: "Dr. Sarah Martinez",
-        role: "Associate Dean",
+        name: "Professor Subramanian Balachander",
+        role: "Professor and the Albert O. Steffey Chair in Marketing",
         company: "A. Gary Anderson Graduate School of Management",
         image: "assets/moderator.jpeg",
-        bio: `<p>TBU.</p>`
+        bio: `<p>Subramanian “Bala” Balachander is Professor and the Albert O. Steffey Chair in Marketing at
+the UCR School of Business. He also serves as the Academic Director of the Master of Science
+in Business Analytics (MSBA) program offered by the School of Business in conjunction with
+the Department of Statistics, and is the Area Coordinator for the Marketing area. His research
+studies competitive marketing strategy, pricing, bundling, sales promotions and market signaling
+employing methods of game theory and structural econometric models, and he has chaired the
+dissertations of close to a dozen doctoral students. His teaching interests are in marketing
+strategy, pricing, digital marketing and marketing models. Professor Balachander is a Senior
+Editor of Production and Operations Management and served previously on the Editorial Board
+of Marketing Science. He was recently recognized as a Global Retail Brand Management
+Research Fellow and was named a Purdue University Faculty Scholar in 2009. Prior to joining
+UCR, he was a Professor of Management at Purdue University’s Krannert School of
+Management. Professor Balachander has a Ph. D. in Industrial Administration from Carnegie
+Mellon University, an MBA from IIM, Calcutta and a B. Tech in Chemical Engineering from
+IIT, Madras.</p>`
     },
     colin: {
         name: "Colin Kessinger",
