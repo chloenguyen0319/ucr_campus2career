@@ -1,4 +1,4 @@
-# UCR Campus to Career Session Series
+# UCR Campus to Career Session Series 2026
 
 A landing page for the UCR Campus to Career Session Series event, showcasing guest speakers and event registration information.
 
