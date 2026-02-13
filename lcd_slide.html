@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus to Career - LCD Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Fira+Sans:wght@300;400;500&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #003DA5;
+            --brand-gold: #FFB81C;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Fira Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .lcd-container {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--brand-blue) 0%, #002580 100%);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            color: var(--white);
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vh 4vw;
+            background: linear-gradient(rgba(0, 61, 165, 0.9), rgba(0, 61, 165, 0.9)),
+                        url('assets/business_building_1.avif') center/cover no-repeat;
+            border-bottom: 4px solid var(--brand-gold);
+        }
+
+        .title-group h1 {
+            line-height: 1;
+        }
+
+        .title-main {
+            font-family: 'EB Garamond', serif;
+            font-weight: 400;
+            font-size: 2.8vw;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .title-sub {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 3vw;
+            text-transform: uppercase;
+            color: var(--brand-gold);
+            display: block;
+            letter-spacing: -1px;
+        }
+
+        .event-info {
+            display: flex;
+            gap: 3vw;
+            align-items: center;
+        }
+
+        .info-block {
+            text-align: center;
+            padding: 1vh 2vw;
+            border-left: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .info-block:first-child {
+            border-left: none;
+        }
+
+        .info-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.8vw;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-gold);
+            margin-bottom: 0.3vh;
+        }
+
+        .info-value {
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 1.2vw;
+            font-weight: 500;
+        }
+
+        .logo-container img {
+            height: 20vh;
+            width: auto;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3vw;
+            padding: 3vh 4vw;
+            align-items: center;
+        }
+
+        /* SPEAKERS */
+        .speakers-section {
+            flex: 1;
+        }
+
+        .section-label {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 2.2vw;
+            letter-spacing: 1px;
+            color: var(--white);
+            margin-bottom: 2vh;
+            text-align: center;
+        }
+
+        .speaker-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3vw;
+        }
+
+        .speaker-card {
+            text-align: center;
+            flex: 1;
+            max-width: 20vw;
+        }
+
+        .speaker-photo {
+            width: 12vw;
+            height: 12vw;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.2);
+            margin: 0 auto 1.5vh;
+            display: block;
+        }
+
+        .speaker-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 2vw;
+            margin-bottom: 0.5vh;
+        }
+
+        .speaker-role {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1vw;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--brand-gold);
+        }
+
+        .speaker-company {
+            font-size: 1vw;
+            opacity: 0.7;
+            font-style: italic;
+            margin-top: 0.3vh;
+        }
+
+        /* QR SECTION */
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vh;
+            padding-left: 3vw;
+            border-left: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .qr-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8vw;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-gold);
+            text-align: center;
+        }
+
+        .qr-codes {
+            display: flex;
+            gap: 2vw;
+        }
+
+        .qr-item {
+            text-align: center;
+        }
+
+        .qr-wrapper {
+            background: var(--white);
+            padding: 0.3vw;
+            border-radius: 4px;
+            margin-bottom: 1vh;
+        }
+
+        .qr-wrapper img {
+            width: 7vw;
+            height: 7vw;
+            display: block;
+        }
+
+        .qr-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1vw;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .zoom-option {
+            text-align: center;
+            margin-top: 1vh;
+        }
+
+        .zoom-note {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.2vw;
+            color: var(--brand-gold);
+            margin-bottom: 0.8vh;
+        }
+
+        .zoom-option .qr-wrapper {
+            padding: 0.3vw;
+            display: inline-block;
+        }
+
+        .zoom-option .qr-wrapper img {
+            width: 7vw;
+            height: 7vw;
+            display: block;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--brand-gold);
+            padding: 1.5vh 4vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-tagline {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.5vw;
+            color: var(--brand-blue);
+            font-style: italic;
+        }
+
+        .footer-info {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1vw;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="lcd-container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="title-group">
+                <h1>
+                    <span class="title-main">Campus to Career</span>
+                    <span class="title-sub">Session Series</span>
+                </h1>
+            </div>
+
+            <div class="event-info">
+                <div class="info-block">
+                    <div class="info-label">Date</div>
+                    <div class="info-value">Thursday, February 26, 2026</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Time</div>
+                    <div class="info-value">3:00 PM PST</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Location</div>
+                    <div class="info-value">SBB Finance Lab</div>
+                </div>
+            </div>
+
+            <div class="logo-container">
+                <img src="assets/university_logo.png" alt="UCR Logo">
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <section class="speakers-section">
+                <div class="section-label">Meet Our Brilliant Speakers</div>
+                <div class="speaker-grid">
+                    <div class="speaker-card">
+                        <img src="assets/colin_kessinger.jpg" alt="Dr. Colin Kessinger" class="speaker-photo">
+                        <h3 class="speaker-name">Dr. Colin Kessinger</h3>
+                        <div class="speaker-role">Partner & Advisor</div>
+                        <div class="speaker-company">Ethos Capital | Kiso Technology</div>
+                    </div>
+                    <div class="speaker-card">
+                        <img src="assets/bonnie_li.jpeg" alt="Dr. Bonnie Li" class="speaker-photo">
+                        <h3 class="speaker-name">Dr. Bonnie Li</h3>
+                        <div class="speaker-role">Staff Behavioral Scientist</div>
+                        <div class="speaker-company">Toyota Research Institute</div>
+                    </div>
+                    <div class="speaker-card">
+                        <img src="assets/randolph_kim.jpeg" alt="Mr. Randolph Kim" class="speaker-photo">
+                        <h3 class="speaker-name">Mr. Randolph Kim</h3>
+                        <div class="speaker-role">Global Family Office Services Director</div>
+                        <div class="speaker-company">Wedbush AlphaOne</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="qr-section">
+                <div class="qr-title">Scan to Register</div>
+                <div class="qr-codes">
+                    <div class="qr-item">
+                        <div class="qr-wrapper">
+                            <img src="assets/for_undergraduate.png" alt="QR for Undergraduate">
+                        </div>
+                        <div class="qr-label">Undergraduate</div>
+                    </div>
+                    <div class="qr-item">
+                        <div class="qr-wrapper">
+                            <img src="assets/for_graduate.png" alt="QR for Graduate">
+                        </div>
+                        <div class="qr-label">Graduate</div>
+                    </div>
+                </div>
+                <div class="zoom-option">
+                    <div class="zoom-note">Can't attend in person?</div>
+                    <div class="qr-item">
+                        <div class="qr-wrapper">
+                            <img src="assets/QR_zoom.png" alt="QR for Zoom">
+                        </div>
+                        <div class="qr-label">Join via Zoom</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-tagline">Gain insights, build connections, and accelerate your career journey.</div>
+            <div class="footer-info">A. Gary Anderson Graduate School of Management</div>
+        </footer>
+    </div>
+</body>
+</html>
